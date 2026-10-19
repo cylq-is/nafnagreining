@@ -50,8 +50,30 @@ uv run pytest -s              # run the tests and print accuracy reports
 uv run python tests/test_icelandic.py --refresh   # re-download the Wikipedia test text
 uv run python tools/build_wordlist.py             # rebuild the Icelandic word list
 uv build                      # build sdist and wheel into dist/
-uv publish                    # upload to PyPI (needs a PyPI token)
 ```
+
+## Releasing
+
+Releases are automatic. Every pull request runs the tests on Linux and macOS.
+When a pull request is merged to `main`, the release workflow:
+
+1. bumps the version in `pyproject.toml`,
+2. commits it as `Release vX.Y.Z` and tags it,
+3. publishes to PyPI through trusted publishing (no token stored),
+4. creates a GitHub release.
+
+Choose the bump size with a label on the pull request:
+
+| Label | Bump |
+|---|---|
+| *(none)* | patch: 1.2.3 → 1.2.4 |
+| `release:minor` | minor: 1.2.3 → 1.3.0 |
+| `release:major` | major: 1.2.3 → 2.0.0 |
+| `release:skip` | no release (docs, CI, tests) |
+
+Direct pushes to `main` are not released. If the PyPI upload fails, use
+**Re-run failed jobs** on the workflow run. That publishes the same tag again
+without bumping the version a second time.
 
 ## Data and licences
 
