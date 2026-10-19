@@ -1,0 +1,17 @@
+is_words.txt.gz — Icelandic word forms
+
+This file lists every word form generated from the Icelandic Hunspell dictionary
+(is.dic and is.aff) of the hunspell-is project, by expanding its suffix rules
+with tools/build_wordlist.py. The forms are unchanged; the file only lowercases
+and sorts them.
+
+Source:   hunspell-is, https://github.com/nifgraup/hunspell-is
+          (as distributed in https://github.com/LibreOffice/dictionaries, folder "is")
+Based on: Íslenska Wikiorðabókin (Icelandic Wiktionary), https://is.wiktionary.org,
+          and a public-domain word list by Orðabók Háskólans and Reiknistofnun
+          Háskóla Íslands
+Licence:  Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+          https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+If you redistribute this file or anything made from it, you must give the same
+attribution and share it under CC BY-SA 3.0 or a compatible licence.
