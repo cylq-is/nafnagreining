@@ -1,6 +1,6 @@
 [project]
 name = "nafnagreining"
-version = "0.1.0"
+version = "0.1.1"
 description = "Icelandic language detection and extraction of person names, places and locations"
 readme = "README.md"
 requires-python = ">=3.10"
